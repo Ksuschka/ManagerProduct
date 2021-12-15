@@ -23,6 +23,7 @@ class ProductManagerTest {
 
     ProductRepository repository = new ProductRepository();
     ProductManager catalog = new ProductManager(repository);
+
     @Test
     public void shouldAddBookToCatalog() {
         catalog.add(moron);
@@ -62,6 +63,7 @@ class ProductManagerTest {
         Product[] expected = new Product[]{galaxyA40};
         assertArrayEquals(expected, actual);
     }
+
     @Test
     public void shouldSearchManufacturer() {
         catalog.add(iPhone13);
@@ -69,6 +71,7 @@ class ProductManagerTest {
         Product[] expected = new Product[]{iPhone13};
         assertArrayEquals(expected, actual);
     }
+
     @Test
     public void shouldNotSearchSmartphone(){
         catalog.add(galaxyA40);
@@ -76,6 +79,7 @@ class ProductManagerTest {
         Product[] expected = new Product[]{};
         assertArrayEquals(expected, actual);
     }
+
     @Test
     public void shouldNotSearchAnything(){
         catalog.add(ruchka);
@@ -83,6 +87,7 @@ class ProductManagerTest {
         Product[] expected = new Product[]{};
         assertArrayEquals(expected, actual);
     }
+
     @Test
     public void shouldSearchSmartphone(){
         catalog.add(galaxyA40);
@@ -93,6 +98,7 @@ class ProductManagerTest {
         Product[] expected = new Product[]{galaxyA40,galaxyA22};
         assertArrayEquals(expected, actual);
     }
+
 }
 
 
